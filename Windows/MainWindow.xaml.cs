@@ -10,10 +10,10 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Sessia2_5.Classes;
 
-namespace Sessia2_5
+namespace Sessia2_5.Windows
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -23,6 +23,8 @@ namespace Sessia2_5
         public MainWindow()
         {
             InitializeComponent();
+            var Agent = EntityBD.Entities.Agent.ToList();
+            List.ItemsSource = Agent;
         }
     }
 }
